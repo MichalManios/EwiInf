@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6E27C99F-8BE1-4D9B-890C-10D03A4232B3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EwiInf</RootNamespace>
+    <AssemblyName>EwiInf</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.12.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.12.1\lib\net45\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\Desktop\itextsharp\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="QRCoder">
+      <HintPath>..\..\..\..\Desktop\itextsharp\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CardConectAndModify.cs" />
+    <Compile Include="CardConservation.cs" />
+    <Compile Include="ConectAndModifyData.cs" />
+    <Compile Include="ConnectionAndUser.cs" />
+    <Compile Include="EwidenceConfig.cs" />
+    <Compile Include="EwidencjaDataSet.cs">
+      <DependentUpon>EwidencjaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EwidencjaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EwidencjaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Faktura.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Faktura.Designer.cs">
+      <DependentUpon>Faktura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FakturaClass.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6.Designer.cs">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form7.Designer.cs">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="History.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="History.Designer.cs">
+      <DependentUpon>History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryClass.cs" />
+    <Compile Include="IacDocument.cs" />
+    <Compile Include="ITextEvent.cs" />
+    <Compile Include="Logowanie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Logowanie.Designer.cs">
+      <DependentUpon>Logowanie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LookDataGridView.cs" />
+    <Compile Include="Pietra.cs" />
+    <Compile Include="Pomieszczenia.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UstawieniaPolaczenia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UstawieniaPolaczenia.Designer.cs">
+      <DependentUpon>UstawieniaPolaczenia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZmianaHasla.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZmianaHasla.Designer.cs">
+      <DependentUpon>ZmianaHasla.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Faktura.resx">
+      <DependentUpon>Faktura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6.resx">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form7.resx">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="History.resx">
+      <DependentUpon>History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logowanie.resx">
+      <DependentUpon>Logowanie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UstawieniaPolaczenia.resx">
+      <DependentUpon>UstawieniaPolaczenia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZmianaHasla.resx">
+      <DependentUpon>ZmianaHasla.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="EwidencjaDataSet.xsc">
+      <DependentUpon>EwidencjaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EwidencjaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>EwidencjaDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="EwidencjaDataSet.xss">
+      <DependentUpon>EwidencjaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\godlosw.png" />
+    <None Include="Resources\godlo2.jpg" />
+    <None Include="Resources\15488858171582779197-64.png" />
+    <None Include="Resources\1372266461582793676-64.png" />
+    <None Include="Resources\884813891582962154-64.png" />
+    <None Include="Resources\1820249201578889576-64.png" />
+    <None Include="Resources\13445036611578889017-64.png" />
+    <None Include="Resources\1315624731558096342-64.png" />
+    <None Include="Resources\12915329811554373174-64.png" />
+    <None Include="Resources\4805666671554373173-64.png" />
+    <None Include="Resources\2935848591554373173-64.png" />
+    <None Include="Resources\5709656181554373175-64.png" />
+    <None Include="Resources\18164853001547642716-64.png" />
+    <None Include="Resources\5340407521530272909-64.png" />
+    <None Include="Resources\4520756121578289040-64.png" />
+    <None Include="Resources\1377913781578889015-64.png" />
+    <None Include="Resources\5891647491535351484-64.png" />
+    <None Include="Resources\10989560851558096437-64.png" />
+    <None Include="Resources\15984328721530513410-128.png" />
+    <None Include="Resources\9411509341557740371-128.png" />
+    <None Include="Resources\15965365301579761135-128.png" />
+    <None Include="Resources\1102208761536063356-128.png" />
+    <None Include="Resources\14388637931537348221-128.png" />
+    <None Include="Resources\19702157991557740339-128.png" />
+    <None Include="Resources\5215451391579762107-64.png" />
+    <None Include="Resources\13898481211537356036-64.png" />
+    <None Include="Resources\16755934531579697357-64.png" />
+    <None Include="Resources\19543538161579680322-64.png" />
+    <None Include="Resources\14135758771552302099-64.png" />
+    <None Include="Resources\19347806521579762103-64.png" />
+    <None Include="Resources\19445089991553668384-64.png" />
+    <None Include="Resources\19265206991579511413-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.1 %28x86 i x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18657527611579511456-641.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6995618151582800396-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15953438001579090778-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14974663671582988848-64.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
