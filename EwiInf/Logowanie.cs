@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Data.SqlClient;
 
 namespace EwiInf
 {
@@ -134,6 +135,25 @@ namespace EwiInf
             }
         }
 
+        public bool IsServerConnected()
+        {
+
+            string sConnectionString = "Data Source=" + con.ServerName + "\\" + con.ServerSQLinstance + ";Initial Catalog=" + con.DatabaseName + ";User ID=" + con.User + ";Password=" + con.Password + ";";
+            using (var l_oConnection = new SqlConnection(sConnectionString))
+            {
+                try
+                {
+
+                    l_oConnection.Open();
+                    return true;
+                }
+                catch (SqlException)
+                {
+                    return false;
+                }
+            }
+        }
+
         private void iconButtonLogin_Click(object sender, EventArgs e)
         {
             //deserialicazja
@@ -146,7 +166,7 @@ namespace EwiInf
                     con = (ConnectionAndUser)formatter.Deserialize(input);
                 }
             }
-            if (con.NotEmpty())
+            if (con.NotEmpty() && IsServerConnected())
             {
                 if (con.CheckUserAndPassword(textBoxUser.Text, textBoxHaslo.Text))
                 {
@@ -161,7 +181,8 @@ namespace EwiInf
             }
             else
             {
-                MessageBox.Show("Wpierw musisz zapisać ustawienia połączenia!", "OSTRZEŻENIE!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if(con.NotEmpty()==false) MessageBox.Show("Wpierw musisz zapisać ustawienia połączenia!", "OSTRZEŻENIE!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else MessageBox.Show("Wprowadź ponownie wszystkie ustawienia w oknie Ustawienia połączenia i przetestuj to połączenie. Następnie spróbuj się zalogować.", "OSTRZEŻENIE!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 textBoxUser.ForeColor = Color.Gray;
                 textBoxUser.Font = new Font(textBoxUser.Font, FontStyle.Italic);
@@ -175,6 +196,11 @@ namespace EwiInf
         }
 
         private void zmianaHasla1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void zmianaHasla1_Load_1(object sender, EventArgs e)
         {
 
         }

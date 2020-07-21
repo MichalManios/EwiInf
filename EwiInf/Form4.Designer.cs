@@ -83,7 +83,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.gdzieTextBox = new System.Windows.Forms.TextBox();
             this.kartaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ewidencjaDataSet = new EwiInf.EwidencjaDataSet();
+            this.ewidencjaDataSet = new global::EwiInf.EwidencjaDataSet();
             this.gdzie4TextBox = new System.Windows.Forms.TextBox();
             this.od_kiedy4TextBox = new System.Windows.Forms.TextBox();
             this.uzytkownik4TextBox = new System.Windows.Forms.TextBox();
@@ -195,11 +195,11 @@
             this.btSaveServices = new System.Windows.Forms.Button();
             this.btAddServices = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.ewiTableAdapter = new EwiInf.EwidencjaDataSetTableAdapters.EwiTableAdapter();
-            this.kartaTableAdapter = new EwiInf.EwidencjaDataSetTableAdapters.KartaTableAdapter();
-            this.tableAdapterManager = new EwiInf.EwidencjaDataSetTableAdapters.TableAdapterManager();
-            this.karta_konserwacjaTableAdapter = new EwiInf.EwidencjaDataSetTableAdapters.Karta_konserwacjaTableAdapter();
-            this.karta_naprawyTableAdapter = new EwiInf.EwidencjaDataSetTableAdapters.Karta_naprawyTableAdapter();
+            this.ewiTableAdapter = new global::EwiInf.EwidencjaDataSetTableAdapters.EwiTableAdapter();
+            this.kartaTableAdapter = new global::EwiInf.EwidencjaDataSetTableAdapters.KartaTableAdapter();
+            this.tableAdapterManager = new global::EwiInf.EwidencjaDataSetTableAdapters.TableAdapterManager();
+            this.karta_konserwacjaTableAdapter = new global::EwiInf.EwidencjaDataSetTableAdapters.Karta_konserwacjaTableAdapter();
+            this.karta_naprawyTableAdapter = new global::EwiInf.EwidencjaDataSetTableAdapters.Karta_naprawyTableAdapter();
             nazwa_urzadzeniaLabel = new System.Windows.Forms.Label();
             marka_urzadzeniaLabel = new System.Windows.Forms.Label();
             model_urzadzeniaLabel = new System.Windows.Forms.Label();
@@ -2251,7 +2251,7 @@
             this.tableAdapterManager.Karta_konserwacjaTableAdapter = this.karta_konserwacjaTableAdapter;
             this.tableAdapterManager.Karta_naprawyTableAdapter = this.karta_naprawyTableAdapter;
             this.tableAdapterManager.KartaTableAdapter = this.kartaTableAdapter;
-            this.tableAdapterManager.UpdateOrder = EwiInf.EwidencjaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = global::EwiInf.EwidencjaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // karta_konserwacjaTableAdapter
             // 

@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.539
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EwiInf", "EwiInf\EwiInf.csproj", "{6E27C99F-8BE1-4D9B-890C-10D03A4232B3}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup EwiInf", "Setup EwiInf\Setup EwiInf.vdproj", "{6C489120-D43A-487A-9D74-E350208CD93D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,9 @@ Global
 		{6E27C99F-8BE1-4D9B-890C-10D03A4232B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E27C99F-8BE1-4D9B-890C-10D03A4232B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E27C99F-8BE1-4D9B-890C-10D03A4232B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C489120-D43A-487A-9D74-E350208CD93D}.Debug|Any CPU.ActiveCfg = Debug
+		{6C489120-D43A-487A-9D74-E350208CD93D}.Release|Any CPU.ActiveCfg = Release
+		{6C489120-D43A-487A-9D74-E350208CD93D}.Release|Any CPU.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

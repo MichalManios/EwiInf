@@ -47,46 +47,14 @@
             System.Windows.Forms.Label nazwisko_ImieLabel;
             System.Windows.Forms.Label opis_fakturyLabel;
             System.Windows.Forms.Label sposob_zaplatyLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Faktura));
             this.panelTitle = new System.Windows.Forms.Panel();
             this.labelTitle = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panelControlButton = new System.Windows.Forms.Panel();
-            this.bEdit = new System.Windows.Forms.Button();
-            this.bAddPositionAtFaktura = new System.Windows.Forms.Button();
-            this.bEnterSearch = new System.Windows.Forms.Button();
-            this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.btPrint = new System.Windows.Forms.Button();
-            this.bFind = new System.Windows.Forms.Button();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.bCancel = new System.Windows.Forms.Button();
-            this.bSave = new System.Windows.Forms.Button();
-            this.panelAddFaktura = new System.Windows.Forms.Panel();
-            
-            this.lpTextBox = new System.Windows.Forms.TextBox();
-            this.miesiacComboBox = new System.Windows.Forms.ComboBox();
-            this.paragrafTextBox = new System.Windows.Forms.TextBox();
-            this.pozycja_paragrafTextBox = new System.Windows.Forms.TextBox();
-            this.nr_fakturyTextBox = new System.Windows.Forms.TextBox();
-            this.data_fakturyTextBox = new System.Windows.Forms.TextBox();
-            this.dostawcaTextBox = new System.Windows.Forms.TextBox();
-            this.specyfikacjaTextBox = new System.Windows.Forms.TextBox();
-            this.iloscTextBox = new System.Windows.Forms.TextBox();
-            this.jednostka_miaryComboBox = new System.Windows.Forms.ComboBox();
-            this.indeks_finansowyTextBox = new System.Windows.Forms.TextBox();
-            this.rodzaj_ewidencjiComboBox = new System.Windows.Forms.ComboBox();
-            this.wartoscTextBox = new System.Windows.Forms.TextBox();
-            this.termin_platnosciTextBox = new System.Windows.Forms.TextBox();
-            this.sposob_zaplatyComboBox = new System.Windows.Forms.ComboBox();
-            this.przekazano_do_DFTextBox = new System.Windows.Forms.TextBox();
-            this.nazwisko_ImieTextBox = new System.Windows.Forms.TextBox();
-            this.opis_fakturyTextBox = new System.Windows.Forms.TextBox();
-            this.fakturyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ewidencjaDataSet = new EwiInf.EwidencjaDataSet();
             this.lpDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.miesiacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paragrafDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -105,8 +73,41 @@
             this.przekazanodoDFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazwiskoImieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.opisfakturyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fakturyTableAdapter = new EwiInf.EwidencjaDataSetTableAdapters.FakturyTableAdapter();
-            this.tableAdapterManager = new EwiInf.EwidencjaDataSetTableAdapters.TableAdapterManager();
+            this.fakturyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ewidencjaDataSet = new global::EwiInf.EwidencjaDataSet();
+            this.panelControlButton = new System.Windows.Forms.Panel();
+            this.bEdit = new System.Windows.Forms.Button();
+            this.bAddPositionAtFaktura = new System.Windows.Forms.Button();
+            this.bEnterSearch = new System.Windows.Forms.Button();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.btPrint = new System.Windows.Forms.Button();
+            this.bFind = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.bCancel = new System.Windows.Forms.Button();
+            this.bSave = new System.Windows.Forms.Button();
+            this.btNextPosition = new System.Windows.Forms.Button();
+            this.panelAddFaktura = new System.Windows.Forms.Panel();
+            this.chbITorNOT = new System.Windows.Forms.CheckBox();
+            this.sposob_zaplatyComboBox = new System.Windows.Forms.ComboBox();
+            this.lpTextBox = new System.Windows.Forms.TextBox();
+            this.miesiacComboBox = new System.Windows.Forms.ComboBox();
+            this.paragrafTextBox = new System.Windows.Forms.TextBox();
+            this.pozycja_paragrafTextBox = new System.Windows.Forms.TextBox();
+            this.nr_fakturyTextBox = new System.Windows.Forms.TextBox();
+            this.data_fakturyTextBox = new System.Windows.Forms.TextBox();
+            this.dostawcaTextBox = new System.Windows.Forms.TextBox();
+            this.specyfikacjaTextBox = new System.Windows.Forms.TextBox();
+            this.iloscTextBox = new System.Windows.Forms.TextBox();
+            this.jednostka_miaryComboBox = new System.Windows.Forms.ComboBox();
+            this.indeks_finansowyTextBox = new System.Windows.Forms.TextBox();
+            this.rodzaj_ewidencjiComboBox = new System.Windows.Forms.ComboBox();
+            this.wartoscTextBox = new System.Windows.Forms.TextBox();
+            this.termin_platnosciTextBox = new System.Windows.Forms.TextBox();
+            this.przekazano_do_DFTextBox = new System.Windows.Forms.TextBox();
+            this.nazwisko_ImieTextBox = new System.Windows.Forms.TextBox();
+            this.opis_fakturyTextBox = new System.Windows.Forms.TextBox();
+            this.fakturyTableAdapter = new global::EwiInf.EwidencjaDataSetTableAdapters.FakturyTableAdapter();
+            this.tableAdapterManager = new global::EwiInf.EwidencjaDataSetTableAdapters.TableAdapterManager();
             lpLabel = new System.Windows.Forms.Label();
             miesiacLabel = new System.Windows.Forms.Label();
             paragrafLabel = new System.Windows.Forms.Label();
@@ -127,10 +128,10 @@
             sposob_zaplatyLabel = new System.Windows.Forms.Label();
             this.panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panelControlButton.SuspendLayout();
-            this.panelAddFaktura.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fakturyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ewidencjaDataSet)).BeginInit();
+            this.panelControlButton.SuspendLayout();
+            this.panelAddFaktura.SuspendLayout();
             this.SuspendLayout();
             // 
             // lpLabel
@@ -364,14 +365,14 @@
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.lpDataGridViewTextBoxColumn,
@@ -393,14 +394,14 @@
             this.nazwiskoImieDataGridViewTextBoxColumn,
             this.opisfakturyDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.fakturyBindingSource;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.Location = new System.Drawing.Point(0, 50);
             this.dataGridView1.MultiSelect = false;
@@ -413,6 +414,178 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1384, 595);
             this.dataGridView1.TabIndex = 6;
+            // 
+            // lpDataGridViewTextBoxColumn
+            // 
+            this.lpDataGridViewTextBoxColumn.DataPropertyName = "Lp";
+            this.lpDataGridViewTextBoxColumn.HeaderText = "Lp";
+            this.lpDataGridViewTextBoxColumn.Name = "lpDataGridViewTextBoxColumn";
+            this.lpDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lpDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.lpDataGridViewTextBoxColumn.Width = 34;
+            // 
+            // miesiacDataGridViewTextBoxColumn
+            // 
+            this.miesiacDataGridViewTextBoxColumn.DataPropertyName = "Miesiac";
+            this.miesiacDataGridViewTextBoxColumn.HeaderText = "Miesiąc";
+            this.miesiacDataGridViewTextBoxColumn.Name = "miesiacDataGridViewTextBoxColumn";
+            this.miesiacDataGridViewTextBoxColumn.ReadOnly = true;
+            this.miesiacDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.miesiacDataGridViewTextBoxColumn.Width = 71;
+            // 
+            // paragrafDataGridViewTextBoxColumn
+            // 
+            this.paragrafDataGridViewTextBoxColumn.DataPropertyName = "Paragraf";
+            this.paragrafDataGridViewTextBoxColumn.HeaderText = "Paragraf";
+            this.paragrafDataGridViewTextBoxColumn.Name = "paragrafDataGridViewTextBoxColumn";
+            this.paragrafDataGridViewTextBoxColumn.ReadOnly = true;
+            this.paragrafDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.paragrafDataGridViewTextBoxColumn.Width = 79;
+            // 
+            // pozycjaparagrafDataGridViewTextBoxColumn
+            // 
+            this.pozycjaparagrafDataGridViewTextBoxColumn.DataPropertyName = "Pozycja_paragraf";
+            this.pozycjaparagrafDataGridViewTextBoxColumn.HeaderText = "Pozycja paragraf";
+            this.pozycjaparagrafDataGridViewTextBoxColumn.Name = "pozycjaparagrafDataGridViewTextBoxColumn";
+            this.pozycjaparagrafDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pozycjaparagrafDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.pozycjaparagrafDataGridViewTextBoxColumn.Width = 126;
+            // 
+            // nrfakturyDataGridViewTextBoxColumn
+            // 
+            this.nrfakturyDataGridViewTextBoxColumn.DataPropertyName = "Nr_faktury";
+            this.nrfakturyDataGridViewTextBoxColumn.HeaderText = "Nr faktury";
+            this.nrfakturyDataGridViewTextBoxColumn.Name = "nrfakturyDataGridViewTextBoxColumn";
+            this.nrfakturyDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nrfakturyDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.nrfakturyDataGridViewTextBoxColumn.Width = 82;
+            // 
+            // datafakturyDataGridViewTextBoxColumn
+            // 
+            this.datafakturyDataGridViewTextBoxColumn.DataPropertyName = "Data_faktury";
+            this.datafakturyDataGridViewTextBoxColumn.HeaderText = "Data faktury";
+            this.datafakturyDataGridViewTextBoxColumn.Name = "datafakturyDataGridViewTextBoxColumn";
+            this.datafakturyDataGridViewTextBoxColumn.ReadOnly = true;
+            this.datafakturyDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.datafakturyDataGridViewTextBoxColumn.Width = 97;
+            // 
+            // dostawcaDataGridViewTextBoxColumn
+            // 
+            this.dostawcaDataGridViewTextBoxColumn.DataPropertyName = "Dostawca";
+            this.dostawcaDataGridViewTextBoxColumn.HeaderText = "Dostawca";
+            this.dostawcaDataGridViewTextBoxColumn.Name = "dostawcaDataGridViewTextBoxColumn";
+            this.dostawcaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dostawcaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dostawcaDataGridViewTextBoxColumn.Width = 87;
+            // 
+            // specyfikacjaDataGridViewTextBoxColumn
+            // 
+            this.specyfikacjaDataGridViewTextBoxColumn.DataPropertyName = "Specyfikacja";
+            this.specyfikacjaDataGridViewTextBoxColumn.HeaderText = "Specyfikacja";
+            this.specyfikacjaDataGridViewTextBoxColumn.Name = "specyfikacjaDataGridViewTextBoxColumn";
+            this.specyfikacjaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.specyfikacjaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.specyfikacjaDataGridViewTextBoxColumn.Width = 107;
+            // 
+            // iloscDataGridViewTextBoxColumn
+            // 
+            this.iloscDataGridViewTextBoxColumn.DataPropertyName = "Ilosc";
+            this.iloscDataGridViewTextBoxColumn.HeaderText = "Ilość";
+            this.iloscDataGridViewTextBoxColumn.Name = "iloscDataGridViewTextBoxColumn";
+            this.iloscDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iloscDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.iloscDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // jednostkamiaryDataGridViewTextBoxColumn
+            // 
+            this.jednostkamiaryDataGridViewTextBoxColumn.DataPropertyName = "Jednostka_miary";
+            this.jednostkamiaryDataGridViewTextBoxColumn.HeaderText = "Jednostka miary";
+            this.jednostkamiaryDataGridViewTextBoxColumn.Name = "jednostkamiaryDataGridViewTextBoxColumn";
+            this.jednostkamiaryDataGridViewTextBoxColumn.ReadOnly = true;
+            this.jednostkamiaryDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.jednostkamiaryDataGridViewTextBoxColumn.Width = 122;
+            // 
+            // indeksfinansowyDataGridViewTextBoxColumn
+            // 
+            this.indeksfinansowyDataGridViewTextBoxColumn.DataPropertyName = "Indeks_finansowy";
+            this.indeksfinansowyDataGridViewTextBoxColumn.HeaderText = "Indeks finansowy";
+            this.indeksfinansowyDataGridViewTextBoxColumn.Name = "indeksfinansowyDataGridViewTextBoxColumn";
+            this.indeksfinansowyDataGridViewTextBoxColumn.ReadOnly = true;
+            this.indeksfinansowyDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.indeksfinansowyDataGridViewTextBoxColumn.Width = 131;
+            // 
+            // rodzajewidencjiDataGridViewTextBoxColumn
+            // 
+            this.rodzajewidencjiDataGridViewTextBoxColumn.DataPropertyName = "Rodzaj_ewidencji";
+            this.rodzajewidencjiDataGridViewTextBoxColumn.HeaderText = "Rodzaj ewidencji";
+            this.rodzajewidencjiDataGridViewTextBoxColumn.Name = "rodzajewidencjiDataGridViewTextBoxColumn";
+            this.rodzajewidencjiDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rodzajewidencjiDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.rodzajewidencjiDataGridViewTextBoxColumn.Width = 129;
+            // 
+            // wartoscDataGridViewTextBoxColumn
+            // 
+            this.wartoscDataGridViewTextBoxColumn.DataPropertyName = "Wartosc";
+            this.wartoscDataGridViewTextBoxColumn.HeaderText = "Wartość";
+            this.wartoscDataGridViewTextBoxColumn.Name = "wartoscDataGridViewTextBoxColumn";
+            this.wartoscDataGridViewTextBoxColumn.ReadOnly = true;
+            this.wartoscDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.wartoscDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // terminplatnosciDataGridViewTextBoxColumn
+            // 
+            this.terminplatnosciDataGridViewTextBoxColumn.DataPropertyName = "Termin_platnosci";
+            this.terminplatnosciDataGridViewTextBoxColumn.HeaderText = "Termin płatności";
+            this.terminplatnosciDataGridViewTextBoxColumn.Name = "terminplatnosciDataGridViewTextBoxColumn";
+            this.terminplatnosciDataGridViewTextBoxColumn.ReadOnly = true;
+            this.terminplatnosciDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.terminplatnosciDataGridViewTextBoxColumn.Width = 127;
+            // 
+            // sposobzaplatyDataGridViewTextBoxColumn
+            // 
+            this.sposobzaplatyDataGridViewTextBoxColumn.DataPropertyName = "Sposob_zaplaty";
+            this.sposobzaplatyDataGridViewTextBoxColumn.HeaderText = "Sposób zapłaty";
+            this.sposobzaplatyDataGridViewTextBoxColumn.Name = "sposobzaplatyDataGridViewTextBoxColumn";
+            this.sposobzaplatyDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sposobzaplatyDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.sposobzaplatyDataGridViewTextBoxColumn.Width = 113;
+            // 
+            // przekazanodoDFDataGridViewTextBoxColumn
+            // 
+            this.przekazanodoDFDataGridViewTextBoxColumn.DataPropertyName = "Przekazano_do_DF";
+            this.przekazanodoDFDataGridViewTextBoxColumn.HeaderText = "Przekazano do DF";
+            this.przekazanodoDFDataGridViewTextBoxColumn.Name = "przekazanodoDFDataGridViewTextBoxColumn";
+            this.przekazanodoDFDataGridViewTextBoxColumn.ReadOnly = true;
+            this.przekazanodoDFDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.przekazanodoDFDataGridViewTextBoxColumn.Width = 116;
+            // 
+            // nazwiskoImieDataGridViewTextBoxColumn
+            // 
+            this.nazwiskoImieDataGridViewTextBoxColumn.DataPropertyName = "Nazwisko_Imie";
+            this.nazwiskoImieDataGridViewTextBoxColumn.HeaderText = "Nazwisko Imię";
+            this.nazwiskoImieDataGridViewTextBoxColumn.Name = "nazwiskoImieDataGridViewTextBoxColumn";
+            this.nazwiskoImieDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nazwiskoImieDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.nazwiskoImieDataGridViewTextBoxColumn.Width = 111;
+            // 
+            // opisfakturyDataGridViewTextBoxColumn
+            // 
+            this.opisfakturyDataGridViewTextBoxColumn.DataPropertyName = "Opis_faktury";
+            this.opisfakturyDataGridViewTextBoxColumn.HeaderText = "Opis faktury";
+            this.opisfakturyDataGridViewTextBoxColumn.Name = "opisfakturyDataGridViewTextBoxColumn";
+            this.opisfakturyDataGridViewTextBoxColumn.ReadOnly = true;
+            this.opisfakturyDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.opisfakturyDataGridViewTextBoxColumn.Width = 95;
+            // 
+            // fakturyBindingSource
+            // 
+            this.fakturyBindingSource.DataMember = "Faktury";
+            this.fakturyBindingSource.DataSource = this.ewidencjaDataSet;
+            // 
+            // ewidencjaDataSet
+            // 
+            this.ewidencjaDataSet.DataSetName = "EwidencjaDataSet";
+            this.ewidencjaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panelControlButton
             // 
@@ -549,9 +722,28 @@
             this.bSave.UseVisualStyleBackColor = true;
             this.bSave.Click += new System.EventHandler(this.bSave_Click);
             // 
+            // btNextPosition
+            // 
+            this.btNextPosition.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btNextPosition.BackgroundImage = global::EwiInf.Properties.Resources._19265206991579511413_64;
+            this.btNextPosition.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btNextPosition.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btNextPosition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btNextPosition.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btNextPosition.Location = new System.Drawing.Point(325, 643);
+            this.btNextPosition.Name = "btNextPosition";
+            this.btNextPosition.Size = new System.Drawing.Size(40, 40);
+            this.btNextPosition.TabIndex = 63;
+            this.toolTip1.SetToolTip(this.btNextPosition, "Dodaj kolejną pozycję do tej faktury");
+            this.btNextPosition.UseVisualStyleBackColor = false;
+            this.btNextPosition.Visible = false;
+            this.btNextPosition.Click += new System.EventHandler(this.btNextPosition_Click);
+            // 
             // panelAddFaktura
             // 
             this.panelAddFaktura.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panelAddFaktura.Controls.Add(this.btNextPosition);
+            this.panelAddFaktura.Controls.Add(this.chbITorNOT);
             this.panelAddFaktura.Controls.Add(this.bCancel);
             this.panelAddFaktura.Controls.Add(this.bSave);
             this.panelAddFaktura.Controls.Add(sposob_zaplatyLabel);
@@ -595,7 +787,33 @@
             this.panelAddFaktura.Size = new System.Drawing.Size(650, 692);
             this.panelAddFaktura.TabIndex = 0;
             this.panelAddFaktura.Visible = false;
-            
+            this.panelAddFaktura.Paint += new System.Windows.Forms.PaintEventHandler(this.panelAddFaktura_Paint);
+            // 
+            // chbITorNOT
+            // 
+            this.chbITorNOT.AutoSize = true;
+            this.chbITorNOT.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.chbITorNOT.Location = new System.Drawing.Point(41, 652);
+            this.chbITorNOT.Name = "chbITorNOT";
+            this.chbITorNOT.Size = new System.Drawing.Size(138, 23);
+            this.chbITorNOT.TabIndex = 39;
+            this.chbITorNOT.Text = "Zwykłe zakupy";
+            this.chbITorNOT.UseVisualStyleBackColor = true;
+            this.chbITorNOT.CheckedChanged += new System.EventHandler(this.chbITorNOT_CheckedChanged);
+            // 
+            // sposob_zaplatyComboBox
+            // 
+            this.sposob_zaplatyComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fakturyBindingSource, "Sposob_zaplaty", true));
+            this.sposob_zaplatyComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.sposob_zaplatyComboBox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.sposob_zaplatyComboBox.FormattingEnabled = true;
+            this.sposob_zaplatyComboBox.Items.AddRange(new object[] {
+            "PRZELEW",
+            "GOTÓWKA"});
+            this.sposob_zaplatyComboBox.Location = new System.Drawing.Point(185, 469);
+            this.sposob_zaplatyComboBox.Name = "sposob_zaplatyComboBox";
+            this.sposob_zaplatyComboBox.Size = new System.Drawing.Size(417, 27);
+            this.sposob_zaplatyComboBox.TabIndex = 29;
             // 
             // lpTextBox
             // 
@@ -685,6 +903,7 @@
             this.data_fakturyTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.data_fakturyTextBox.Enter += new System.EventHandler(this.EnterDate);
             this.data_fakturyTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DateKeyPres);
+            this.data_fakturyTextBox.Leave += new System.EventHandler(this.LeaveDateWithoutDate_Leave);
             // 
             // dostawcaTextBox
             // 
@@ -703,6 +922,7 @@
             this.specyfikacjaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fakturyBindingSource, "Specyfikacja", true));
             this.specyfikacjaTextBox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.specyfikacjaTextBox.Location = new System.Drawing.Point(186, 239);
+            this.specyfikacjaTextBox.MaxLength = 25;
             this.specyfikacjaTextBox.Name = "specyfikacjaTextBox";
             this.specyfikacjaTextBox.Size = new System.Drawing.Size(416, 26);
             this.specyfikacjaTextBox.TabIndex = 15;
@@ -739,6 +959,7 @@
             // 
             this.indeks_finansowyTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.indeks_finansowyTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fakturyBindingSource, "Indeks_finansowy", true));
+            this.indeks_finansowyTextBox.Enabled = false;
             this.indeks_finansowyTextBox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.indeks_finansowyTextBox.Location = new System.Drawing.Point(186, 336);
             this.indeks_finansowyTextBox.Name = "indeks_finansowyTextBox";
@@ -751,12 +972,13 @@
             // 
             this.rodzaj_ewidencjiComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fakturyBindingSource, "Rodzaj_ewidencji", true));
             this.rodzaj_ewidencjiComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.rodzaj_ewidencjiComboBox.Enabled = false;
             this.rodzaj_ewidencjiComboBox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.rodzaj_ewidencjiComboBox.FormattingEnabled = true;
             this.rodzaj_ewidencjiComboBox.Items.AddRange(new object[] {
-            "POWYŻEJ",
             "PONIŻEJ",
-            "RODEK TRWAŁY"});
+            "POWYŻEJ",
+            "ŚRODEK TRWAŁY"});
             this.rodzaj_ewidencjiComboBox.Location = new System.Drawing.Point(185, 371);
             this.rodzaj_ewidencjiComboBox.Name = "rodzaj_ewidencjiComboBox";
             this.rodzaj_ewidencjiComboBox.Size = new System.Drawing.Size(417, 27);
@@ -788,20 +1010,7 @@
             this.termin_platnosciTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.termin_platnosciTextBox.Enter += new System.EventHandler(this.EnterDate);
             this.termin_platnosciTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DateKeyPres);
-            // 
-            // sposob_zaplatyComboBox
-            // 
-            this.sposob_zaplatyComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fakturyBindingSource, "Sposob_zaplaty", true));
-            this.sposob_zaplatyComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.sposob_zaplatyComboBox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.sposob_zaplatyComboBox.FormattingEnabled = true;
-            this.sposob_zaplatyComboBox.Items.AddRange(new object[] {
-            "PRZELEW",
-            "GOTÓWKA"});
-            this.sposob_zaplatyComboBox.Location = new System.Drawing.Point(185, 469);
-            this.sposob_zaplatyComboBox.Name = "sposob_zaplatyComboBox";
-            this.sposob_zaplatyComboBox.Size = new System.Drawing.Size(417, 27);
-            this.sposob_zaplatyComboBox.TabIndex = 29;
+            this.termin_platnosciTextBox.Leave += new System.EventHandler(this.LeaveDateWithoutDate_Leave);
             // 
             // przekazano_do_DFTextBox
             // 
@@ -817,6 +1026,7 @@
             this.przekazano_do_DFTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.przekazano_do_DFTextBox.Enter += new System.EventHandler(this.EnterDate);
             this.przekazano_do_DFTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DateKeyPres);
+            this.przekazano_do_DFTextBox.Leave += new System.EventHandler(this.LeaveDateWithoutDate_Leave);
             // 
             // nazwisko_ImieTextBox
             // 
@@ -842,160 +1052,6 @@
             this.opis_fakturyTextBox.Size = new System.Drawing.Size(416, 62);
             this.opis_fakturyTextBox.TabIndex = 35;
             // 
-            // fakturyBindingSource
-            // 
-            this.fakturyBindingSource.DataMember = "Faktury";
-            this.fakturyBindingSource.DataSource = this.ewidencjaDataSet;
-            // 
-            // ewidencjaDataSet
-            // 
-            this.ewidencjaDataSet.DataSetName = "EwidencjaDataSet";
-            this.ewidencjaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // lpDataGridViewTextBoxColumn
-            // 
-            this.lpDataGridViewTextBoxColumn.DataPropertyName = "Lp";
-            this.lpDataGridViewTextBoxColumn.HeaderText = "Lp";
-            this.lpDataGridViewTextBoxColumn.Name = "lpDataGridViewTextBoxColumn";
-            this.lpDataGridViewTextBoxColumn.ReadOnly = true;
-            this.lpDataGridViewTextBoxColumn.Width = 53;
-            // 
-            // miesiacDataGridViewTextBoxColumn
-            // 
-            this.miesiacDataGridViewTextBoxColumn.DataPropertyName = "Miesiac";
-            this.miesiacDataGridViewTextBoxColumn.HeaderText = "Miesiąc";
-            this.miesiacDataGridViewTextBoxColumn.Name = "miesiacDataGridViewTextBoxColumn";
-            this.miesiacDataGridViewTextBoxColumn.ReadOnly = true;
-            this.miesiacDataGridViewTextBoxColumn.Width = 90;
-            // 
-            // paragrafDataGridViewTextBoxColumn
-            // 
-            this.paragrafDataGridViewTextBoxColumn.DataPropertyName = "Paragraf";
-            this.paragrafDataGridViewTextBoxColumn.HeaderText = "Paragraf";
-            this.paragrafDataGridViewTextBoxColumn.Name = "paragrafDataGridViewTextBoxColumn";
-            this.paragrafDataGridViewTextBoxColumn.ReadOnly = true;
-            this.paragrafDataGridViewTextBoxColumn.Width = 98;
-            // 
-            // pozycjaparagrafDataGridViewTextBoxColumn
-            // 
-            this.pozycjaparagrafDataGridViewTextBoxColumn.DataPropertyName = "Pozycja_paragraf";
-            this.pozycjaparagrafDataGridViewTextBoxColumn.HeaderText = "Pozycja paragraf";
-            this.pozycjaparagrafDataGridViewTextBoxColumn.Name = "pozycjaparagrafDataGridViewTextBoxColumn";
-            this.pozycjaparagrafDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pozycjaparagrafDataGridViewTextBoxColumn.Width = 145;
-            // 
-            // nrfakturyDataGridViewTextBoxColumn
-            // 
-            this.nrfakturyDataGridViewTextBoxColumn.DataPropertyName = "Nr_faktury";
-            this.nrfakturyDataGridViewTextBoxColumn.HeaderText = "Nr faktury";
-            this.nrfakturyDataGridViewTextBoxColumn.Name = "nrfakturyDataGridViewTextBoxColumn";
-            this.nrfakturyDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nrfakturyDataGridViewTextBoxColumn.Width = 101;
-            // 
-            // datafakturyDataGridViewTextBoxColumn
-            // 
-            this.datafakturyDataGridViewTextBoxColumn.DataPropertyName = "Data_faktury";
-            this.datafakturyDataGridViewTextBoxColumn.HeaderText = "Data faktury";
-            this.datafakturyDataGridViewTextBoxColumn.Name = "datafakturyDataGridViewTextBoxColumn";
-            this.datafakturyDataGridViewTextBoxColumn.ReadOnly = true;
-            this.datafakturyDataGridViewTextBoxColumn.Width = 116;
-            // 
-            // dostawcaDataGridViewTextBoxColumn
-            // 
-            this.dostawcaDataGridViewTextBoxColumn.DataPropertyName = "Dostawca";
-            this.dostawcaDataGridViewTextBoxColumn.HeaderText = "Dostawca";
-            this.dostawcaDataGridViewTextBoxColumn.Name = "dostawcaDataGridViewTextBoxColumn";
-            this.dostawcaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dostawcaDataGridViewTextBoxColumn.Width = 106;
-            // 
-            // specyfikacjaDataGridViewTextBoxColumn
-            // 
-            this.specyfikacjaDataGridViewTextBoxColumn.DataPropertyName = "Specyfikacja";
-            this.specyfikacjaDataGridViewTextBoxColumn.HeaderText = "Specyfikacja";
-            this.specyfikacjaDataGridViewTextBoxColumn.Name = "specyfikacjaDataGridViewTextBoxColumn";
-            this.specyfikacjaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.specyfikacjaDataGridViewTextBoxColumn.Width = 126;
-            // 
-            // iloscDataGridViewTextBoxColumn
-            // 
-            this.iloscDataGridViewTextBoxColumn.DataPropertyName = "Ilosc";
-            this.iloscDataGridViewTextBoxColumn.HeaderText = "Ilość";
-            this.iloscDataGridViewTextBoxColumn.Name = "iloscDataGridViewTextBoxColumn";
-            this.iloscDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iloscDataGridViewTextBoxColumn.Width = 69;
-            // 
-            // jednostkamiaryDataGridViewTextBoxColumn
-            // 
-            this.jednostkamiaryDataGridViewTextBoxColumn.DataPropertyName = "Jednostka_miary";
-            this.jednostkamiaryDataGridViewTextBoxColumn.HeaderText = "Jednostka miary";
-            this.jednostkamiaryDataGridViewTextBoxColumn.Name = "jednostkamiaryDataGridViewTextBoxColumn";
-            this.jednostkamiaryDataGridViewTextBoxColumn.ReadOnly = true;
-            this.jednostkamiaryDataGridViewTextBoxColumn.Width = 141;
-            // 
-            // indeksfinansowyDataGridViewTextBoxColumn
-            // 
-            this.indeksfinansowyDataGridViewTextBoxColumn.DataPropertyName = "Indeks_finansowy";
-            this.indeksfinansowyDataGridViewTextBoxColumn.HeaderText = "Indeks finansowy";
-            this.indeksfinansowyDataGridViewTextBoxColumn.Name = "indeksfinansowyDataGridViewTextBoxColumn";
-            this.indeksfinansowyDataGridViewTextBoxColumn.ReadOnly = true;
-            this.indeksfinansowyDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // rodzajewidencjiDataGridViewTextBoxColumn
-            // 
-            this.rodzajewidencjiDataGridViewTextBoxColumn.DataPropertyName = "Rodzaj_ewidencji";
-            this.rodzajewidencjiDataGridViewTextBoxColumn.HeaderText = "Rodzaj ewidencji";
-            this.rodzajewidencjiDataGridViewTextBoxColumn.Name = "rodzajewidencjiDataGridViewTextBoxColumn";
-            this.rodzajewidencjiDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rodzajewidencjiDataGridViewTextBoxColumn.Width = 148;
-            // 
-            // wartoscDataGridViewTextBoxColumn
-            // 
-            this.wartoscDataGridViewTextBoxColumn.DataPropertyName = "Wartosc";
-            this.wartoscDataGridViewTextBoxColumn.HeaderText = "Wartość";
-            this.wartoscDataGridViewTextBoxColumn.Name = "wartoscDataGridViewTextBoxColumn";
-            this.wartoscDataGridViewTextBoxColumn.ReadOnly = true;
-            this.wartoscDataGridViewTextBoxColumn.Width = 94;
-            // 
-            // terminplatnosciDataGridViewTextBoxColumn
-            // 
-            this.terminplatnosciDataGridViewTextBoxColumn.DataPropertyName = "Termin_platnosci";
-            this.terminplatnosciDataGridViewTextBoxColumn.HeaderText = "Termin płatności";
-            this.terminplatnosciDataGridViewTextBoxColumn.Name = "terminplatnosciDataGridViewTextBoxColumn";
-            this.terminplatnosciDataGridViewTextBoxColumn.ReadOnly = true;
-            this.terminplatnosciDataGridViewTextBoxColumn.Width = 146;
-            // 
-            // sposobzaplatyDataGridViewTextBoxColumn
-            // 
-            this.sposobzaplatyDataGridViewTextBoxColumn.DataPropertyName = "Sposob_zaplaty";
-            this.sposobzaplatyDataGridViewTextBoxColumn.HeaderText = "Sposób zapłaty";
-            this.sposobzaplatyDataGridViewTextBoxColumn.Name = "sposobzaplatyDataGridViewTextBoxColumn";
-            this.sposobzaplatyDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sposobzaplatyDataGridViewTextBoxColumn.Width = 132;
-            // 
-            // przekazanodoDFDataGridViewTextBoxColumn
-            // 
-            this.przekazanodoDFDataGridViewTextBoxColumn.DataPropertyName = "Przekazano_do_DF";
-            this.przekazanodoDFDataGridViewTextBoxColumn.HeaderText = "Przekazano do DF";
-            this.przekazanodoDFDataGridViewTextBoxColumn.Name = "przekazanodoDFDataGridViewTextBoxColumn";
-            this.przekazanodoDFDataGridViewTextBoxColumn.ReadOnly = true;
-            this.przekazanodoDFDataGridViewTextBoxColumn.Width = 135;
-            // 
-            // nazwiskoImieDataGridViewTextBoxColumn
-            // 
-            this.nazwiskoImieDataGridViewTextBoxColumn.DataPropertyName = "Nazwisko_Imie";
-            this.nazwiskoImieDataGridViewTextBoxColumn.HeaderText = "Nazwisko Imię";
-            this.nazwiskoImieDataGridViewTextBoxColumn.Name = "nazwiskoImieDataGridViewTextBoxColumn";
-            this.nazwiskoImieDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nazwiskoImieDataGridViewTextBoxColumn.Width = 130;
-            // 
-            // opisfakturyDataGridViewTextBoxColumn
-            // 
-            this.opisfakturyDataGridViewTextBoxColumn.DataPropertyName = "Opis_faktury";
-            this.opisfakturyDataGridViewTextBoxColumn.HeaderText = "Opis faktury";
-            this.opisfakturyDataGridViewTextBoxColumn.Name = "opisfakturyDataGridViewTextBoxColumn";
-            this.opisfakturyDataGridViewTextBoxColumn.ReadOnly = true;
-            this.opisfakturyDataGridViewTextBoxColumn.Width = 114;
-            // 
             // fakturyTableAdapter
             // 
             this.fakturyTableAdapter.ClearBeforeFill = true;
@@ -1015,7 +1071,7 @@
             this.tableAdapterManager.PonizejStanOtwarciaTableAdapter = null;
             this.tableAdapterManager.PowyzejStanOtwarciaTableAdapter = null;
             this.tableAdapterManager.StanOtwarciaSTTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = EwiInf.EwidencjaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = global::EwiInf.EwidencjaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // Faktura
             // 
@@ -1031,12 +1087,12 @@
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fakturyBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ewidencjaDataSet)).EndInit();
             this.panelControlButton.ResumeLayout(false);
             this.panelControlButton.PerformLayout();
             this.panelAddFaktura.ResumeLayout(false);
             this.panelAddFaktura.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fakturyBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ewidencjaDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1053,24 +1109,6 @@
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Button btPrint;
         private System.Windows.Forms.Button bFind;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lpDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn miesiacDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn paragrafDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pozycjaparagrafDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nrfakturyDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datafakturyDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dostawcaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn specyfikacjaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iloscDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jednostkamiaryDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn indeksfinansowyDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rodzajewidencjiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn wartoscDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn terminplatnosciDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sposobzaplatyDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn przekazanodoDFDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nazwiskoImieDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn opisfakturyDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource fakturyBindingSource;
         private EwidencjaDataSet ewidencjaDataSet;
         private EwidencjaDataSetTableAdapters.FakturyTableAdapter fakturyTableAdapter;
@@ -1100,5 +1138,25 @@
         private System.Windows.Forms.Button bCancel;
         private System.Windows.Forms.Button bSave;
         private System.Windows.Forms.Button bEdit;
+        private System.Windows.Forms.CheckBox chbITorNOT;
+        private System.Windows.Forms.Button btNextPosition;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lpDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn miesiacDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn paragrafDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pozycjaparagrafDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nrfakturyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datafakturyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dostawcaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn specyfikacjaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iloscDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jednostkamiaryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn indeksfinansowyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rodzajewidencjiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn wartoscDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn terminplatnosciDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sposobzaplatyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn przekazanodoDFDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazwiskoImieDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn opisfakturyDataGridViewTextBoxColumn;
     }
 }

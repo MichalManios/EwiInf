@@ -55,7 +55,6 @@ namespace EwiInf
             
         }
 
-
         //wyszukiwanie w bazie
         public void FindInBase(DataSet dataSet, TextBox textBox, string text)
         {

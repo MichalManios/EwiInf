@@ -59,8 +59,8 @@
             this.ktomodyfikowalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uwagiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.historyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ewidencjaDataSet = new EwiInf.EwidencjaDataSet();
-            this.historyTableAdapter = new EwiInf.EwidencjaDataSetTableAdapters.HistoryTableAdapter();
+            this.ewidencjaDataSet = new global::EwiInf.EwidencjaDataSet();
+            this.historyTableAdapter = new global::EwiInf.EwidencjaDataSetTableAdapters.HistoryTableAdapter();
             this.panelTitle.SuspendLayout();
             this.panelControlButton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();

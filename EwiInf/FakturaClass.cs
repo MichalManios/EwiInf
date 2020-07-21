@@ -83,8 +83,6 @@ namespace EwiInf
             }
         }
 
-
-        
         //zapis do bazy danych
         public void SaveData(params string[] args)//18 bez 0 które jest automatycznie nadawane
         {
@@ -92,7 +90,7 @@ namespace EwiInf
             {
                 connection.Open();
                 string query = "INSERT INTO Faktury (Miesiac, Paragraf, Pozycja_paragraf, Nr_faktury, Data_faktury, Dostawca, Specyfikacja, Ilosc, Jednostka_miary, Indeks_finansowy, Rodzaj_ewidencji, Wartosc, Termin_platnosci, Sposob_zaplaty, Przekazano_do_DF, Nazwisko_Imie, Opis_faktury)" +
-                    "VALUES (N'" + args[1] + "', N'" + Convert.ToInt32(args[2]) + "', N'" + Convert.ToInt32(args[3]) + "', N'" + args[4] + "', N'" + args[5] + "', N'" + args[6] + "', N'" + args[7] + "', N'" + Convert.ToInt32(args[8]) + "', N'" + args[9] + "', N'" + Convert.ToInt32(args[10]) + "', N'" + args[11] + "', N'" + args[12] + "', N'" + args[13] + "', N'" + args[14] + "', N'" + args[15] + "', N'" + args[16] + "', N'" + args[17] + "')";
+                    "VALUES (N'" + args[2] + "', N'" + Convert.ToInt32(args[3]) + "', N'" + Convert.ToInt32(args[4]) + "', N'" + args[5] + "', N'" + args[6] + "', N'" + args[7] + "', N'" + args[8] + "', N'" + Convert.ToInt32(args[9]) + "', N'" + args[10] + "', N'" + Convert.ToInt32(args[11]) + "', N'" + args[12] + "', N'" + args[13] + "', N'" + args[14] + "', N'" + args[0] + "', N'" + args[15] + "', N'" + args[16] + "', N'" + args[17] + "')";
                 SqlDataAdapter SDA = new SqlDataAdapter(query, connection);
                 SDA.SelectCommand.ExecuteNonQuery();
                 connection.Close();
@@ -108,44 +106,30 @@ namespace EwiInf
             }
         }
         //modyfikacja rekordu i zapis modyfikacji
-        public void ModifyData(TextBox textBox1, TextBox textBox2, ComboBox comboBox3, TextBox textBox4, TextBox textBox5,
-                            TextBox textBox6, TextBox textBox7, TextBox textBox8, TextBox textBox9, ComboBox comboBox10,
-                            TextBox textBox11, TextBox textBox12, TextBox textBox13, TextBox textBox14, TextBox textBox15,
-                            TextBox textBox16, TextBox textBox17, TextBox textBox18, TextBox textBox19, TextBox textBox20,
-                            ComboBox comboBox23, ComboBox comboBox24, ComboBox comboBox25,
-                            ComboBox comboBox26, TextBox textBox21, TextBox textBox22, TextBox textBox27, TextBox textBox28)
+        public void ModifyData(params string[] args)
         {
             try
             {
                 connection.Open();
-                string query = "UPDATE Ewi SET Nr_ewidencyjny = N'" + textBox2.Text +
-                    "', Rodzaj_sprzętu = N'" + comboBox3.Text +
-                    "', Nazwa_Producent = N'" + textBox4.Text +
-                    "', Rok_produkcji = N'" + textBox5.Text +
-                    "', Termin_gwarancji = N'" + textBox6.Text +
-                    "', Nr_seryjny = N'" + textBox7.Text +
-                    "', Wartosc_zakupu = N'" + textBox8.Text +
-                    "', Nr_faktury = N'" + textBox9.Text +
-                    "', Rodzaj_ewidencji = N'" + comboBox10.Text +
-                    "', Mac_adres = N'" + textBox11.Text +
-                    "', IP_adres1 = N'" + textBox12.Text +
-                    "', IP_adres2 = N'" + textBox13.Text +
-                    "', IP_adres3 = N'" + textBox14.Text +
-                    "', Karta_grafiki1 = N'" + textBox15.Text +
-                    "', Karta_grafiki2 = N'" + textBox16.Text +
-                    "', Procesor = N'" + textBox17.Text +
-                    "', Ram = N'" + textBox18.Text +
-                    "', Dysk1 = N'" + textBox19.Text +
-                    "', Dysk2 = N'" + textBox20.Text +
-                    "', Budynek = N'" + comboBox23.Text +
-                    "', Pietro = N'" + comboBox24.Text +
-                    "', Pomieszczenie = N'" + comboBox25.Text +
-                    "', Informatyka_Lacznosc = N'" + comboBox26.Text +
-                   "', System_operacyjny = N'" + textBox21.Text +
-                    "', Numer_karty = N'" + textBox22.Text +
-                    "', Uwagi = N'" + textBox27.Text +
-                    "', Index_finansowy = N'" + textBox28.Text +
-                    "'WHERE Id = N'" + textBox1.Text + "'";
+                string query = "UPDATE Faktury SET Miesiac = N'" + args[2] +
+                    "', Paragraf = N'" + args[3] +
+                    "', Pozycja_paragraf = N'" + args[4] +
+                    "', Nr_faktury = N'" + args[5] +
+                    "', Data_faktury = N'" + args[6] +
+                    "', Dostawca = N'" + args[7] +
+                    "', Specyfikacja = N'" + args[8] +
+                    "', Ilosc = N'" + args[9] +
+                    "', Jednostka_miary = N'" + args[10] +
+                    "', Indeks_finansowy = N'" + args[11] +
+                    "', Rodzaj_ewidencji = N'" + args[12] +
+                    "', Wartosc = N'" + args[13] +
+                    "', Termin_platnosci = N'" + args[14] +
+                    "', Sposob_zaplaty = N'" + args[0] +
+                    "', Przekazano_do_DF = N'" + args[15] +
+                    "', Nazwisko_Imie = N'" + args[16] +
+                    "', Opis_faktury = N'" + args[17] +
+                    
+                    "'WHERE Lp = N'" + args[1] + "'";
                 SqlDataAdapter SDA = new SqlDataAdapter(query, connection);
                 SDA.SelectCommand.ExecuteNonQuery();
                 connection.Close();

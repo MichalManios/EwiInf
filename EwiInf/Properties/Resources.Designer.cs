@@ -413,6 +413,16 @@ namespace EwiInf.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap database_icon {
+            get {
+                object obj = ResourceManager.GetObject("database-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap godlo2 {
             get {
                 object obj = ResourceManager.GetObject("godlo2", resourceCulture);
@@ -426,6 +436,16 @@ namespace EwiInf.Properties {
         internal static System.Drawing.Bitmap godlosw {
             get {
                 object obj = ResourceManager.GetObject("godlosw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sync_icon {
+            get {
+                object obj = ResourceManager.GetObject("sync-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

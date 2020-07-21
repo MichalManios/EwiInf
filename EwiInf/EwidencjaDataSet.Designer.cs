@@ -10686,8 +10686,7 @@ SELECT Id, Nr_ewidencyjny, Rodzaj_sprzetu, Nazwa_producenta, Budynek, Pietro, Po
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-DOSSHB6\\SQLEXPRESS;Initial Catalog=C:\\USERS\\1133183\\SOURCE\\RE" +
-                "POS\\EWIINF\\EWIINF\\EWIDENCJA.MDF;User ID=Administrator;Password=789kaoz";
+            this._connection.ConnectionString = global::EwiInf.Properties.Settings.Default.EwidencjaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13749,8 +13748,7 @@ SELECT Id, Nazwa_przedmiotu, JM, Data, Opis, Dokument_ksiegowy, Przychod, Rozcho
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-DOSSHB6\\SQLEXPRESS;Initial Catalog=C:\\USERS\\1133183\\SOURCE\\RE" +
-                "POS\\EWIINF\\EWIINF\\EWIDENCJA.MDF;User ID=Administrator;Password=789kaoz";
+            this._connection.ConnectionString = global::EwiInf.Properties.Settings.Default.EwidencjaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14309,8 +14307,7 @@ SELECT Id, Nazwa_przedmiotu, JM, Data, Opis, Dokument_ksiegowy, Przychod, Rozcho
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-DOSSHB6\\SQLEXPRESS;Initial Catalog=C:\\USERS\\1133183\\SOURCE\\RE" +
-                "POS\\EWIINF\\EWIINF\\EWIDENCJA.MDF;User ID=Administrator;Password=789kaoz";
+            this._connection.ConnectionString = global::EwiInf.Properties.Settings.Default.EwidencjaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14869,8 +14866,7 @@ SELECT Id, Nazwa_przedmiotu, JM, Data, Opis, Dokument_ksiegowy, Przychod, Rozcho
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-DOSSHB6\\SQLEXPRESS;Initial Catalog=C:\\USERS\\1133183\\SOURCE\\RE" +
-                "POS\\EWIINF\\EWIINF\\EWIDENCJA.MDF;User ID=Administrator;Password=789kaoz";
+            this._connection.ConnectionString = global::EwiInf.Properties.Settings.Default.EwidencjaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15410,8 +15406,7 @@ SELECT Id, Rodzaj, JM, Rok, Stan FROM PonizejStanOtwarcia WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-DOSSHB6\\SQLEXPRESS;Initial Catalog=C:\\USERS\\1133183\\SOURCE\\RE" +
-                "POS\\EWIINF\\EWIINF\\EWIDENCJA.MDF;User ID=Administrator;Password=789kaoz";
+            this._connection.ConnectionString = global::EwiInf.Properties.Settings.Default.EwidencjaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15819,8 +15814,7 @@ SELECT Id, Rodzaj, JM, Rok, Stan FROM PowyzejStanOtwarcia WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-DOSSHB6\\SQLEXPRESS;Initial Catalog=C:\\USERS\\1133183\\SOURCE\\RE" +
-                "POS\\EWIINF\\EWIINF\\EWIDENCJA.MDF;User ID=Administrator;Password=789kaoz";
+            this._connection.ConnectionString = global::EwiInf.Properties.Settings.Default.EwidencjaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16228,8 +16222,7 @@ SELECT Id, Rodzaj, JM, Rok, Stan FROM StanOtwarciaST WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-DOSSHB6\\SQLEXPRESS;Initial Catalog=C:\\USERS\\1133183\\SOURCE\\RE" +
-                "POS\\EWIINF\\EWIINF\\EWIDENCJA.MDF;User ID=Administrator;Password=789kaoz";
+            this._connection.ConnectionString = global::EwiInf.Properties.Settings.Default.EwidencjaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16718,8 +16711,7 @@ SELECT Lp, Miesiac, Paragraf, Pozycja_paragraf, Nr_faktury, Data_faktury, Dostaw
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-DOSSHB6\\SQLEXPRESS;Initial Catalog=C:\\USERS\\1133183\\SOURCE\\RE" +
-                "POS\\EWIINF\\EWIINF\\EWIDENCJA.MDF;User ID=Administrator;Password=789kaoz";
+            this._connection.ConnectionString = global::EwiInf.Properties.Settings.Default.EwidencjaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

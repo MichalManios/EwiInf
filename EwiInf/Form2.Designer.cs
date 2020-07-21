@@ -61,7 +61,7 @@
             this.ewiBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.ewiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ewidencjaDataSet = new EwiInf.EwidencjaDataSet();
+            this.ewidencjaDataSet = new global::EwiInf.EwidencjaDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -108,8 +108,8 @@
             this.comboBoxPietro = new System.Windows.Forms.ComboBox();
             this.comboBoxPomieszczenie = new System.Windows.Forms.ComboBox();
             this.comboBoxInformatykaLacznosc = new System.Windows.Forms.ComboBox();
-            this.ewiTableAdapter = new EwiInf.EwidencjaDataSetTableAdapters.EwiTableAdapter();
-            this.tableAdapterManager = new EwiInf.EwidencjaDataSetTableAdapters.TableAdapterManager();
+            this.ewiTableAdapter = new global::EwiInf.EwidencjaDataSetTableAdapters.EwiTableAdapter();
+            this.tableAdapterManager = new global::EwiInf.EwidencjaDataSetTableAdapters.TableAdapterManager();
             this.numer_kartyTextBox1 = new System.Windows.Forms.TextBox();
             this.system_operacyjnyTextBox1 = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -1194,7 +1194,7 @@
             this.tableAdapterManager.Karta_konserwacjaTableAdapter = null;
             this.tableAdapterManager.Karta_naprawyTableAdapter = null;
             this.tableAdapterManager.KartaTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = EwiInf.EwidencjaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = global::EwiInf.EwidencjaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // numer_kartyTextBox1
             // 

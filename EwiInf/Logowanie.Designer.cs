@@ -41,7 +41,7 @@
             this.iconButtonLogin = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.zmianaHasla1 = new EwiInf.ZmianaHasla();
+            this.zmianaHasla1 = new global::EwiInf.ZmianaHasla();
             this.panelUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxUser)).BeginInit();
             this.panelHaslo.SuspendLayout();
@@ -224,6 +224,7 @@
             this.zmianaHasla1.Size = new System.Drawing.Size(564, 228);
             this.zmianaHasla1.TabIndex = 109;
             this.zmianaHasla1.Visible = false;
+            this.zmianaHasla1.Load += new System.EventHandler(this.zmianaHasla1_Load_1);
             // 
             // Logowanie
             // 

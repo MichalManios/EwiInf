@@ -48,8 +48,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.ustawieniaPolaczenia1 = new EwiInf.UstawieniaPolaczenia();
-            this.logowanie1 = new EwiInf.Logowanie();
+            this.ustawieniaPolaczenia1 = new global::EwiInf.UstawieniaPolaczenia();
+            this.logowanie1 = new global::EwiInf.Logowanie();
             this.panelMenu.SuspendLayout();
             this.panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxCurrent)).BeginInit();

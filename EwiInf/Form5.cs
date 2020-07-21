@@ -517,6 +517,8 @@ namespace EwiInf
 
         private void Form5_Load(object sender, EventArgs e)
         {
+            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'ewidencjaDataSet.History' . Możesz go przenieść lub usunąć.
+            this.historyTableAdapter.Fill(this.ewidencjaDataSet.History);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'ewidencjaDataSet1.PonizejStanOtwarcia' . Możesz go przenieść lub usunąć.
             this.ponizejStanOtwarciaTableAdapter.Fill(this.ewidencjaDataSet.PonizejStanOtwarcia);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'ewidencjaDataSet.Ewidencja_ST' . Możesz go przenieść lub usunąć.
@@ -552,6 +554,9 @@ namespace EwiInf
             LookTable.FormatDataGrid(dataGridView4);
             LookTable.FormatDataGrid(dataGridView5);
             LookTable.FormatDataGrid(dataGridView6);
+            LookTable.FormatDataGrid(dataGridView10);
+            LookTable.FormatDataGrid(dataGridView11);
+            LookTable.FormatDataGrid(dataGridView12);
             //visible przycisków edit na wszystkich 3 formatkach jesli jest jakis rekord
             InitializeButtonsAndText();
             //połączenie i sczytanie danych z tabeli ewi
@@ -1264,7 +1269,14 @@ namespace EwiInf
 
         private void btPrintSrodki_Click(object sender, EventArgs e)
         {
-            GenerateReportSrodki(dataGridView1, "Środki trwałe", dataGridView7);
+            try
+            {
+                GenerateReportSrodki(dataGridView1, "Środki trwałe", dataGridView7);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OSTRZEŻENIE!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         //raport środki trwałe, powyzej i ponizej
@@ -1534,44 +1546,53 @@ namespace EwiInf
 
         private void btPrintPowyzej_Click(object sender, EventArgs e)
         {
-            GenerateReportSrodki(dataGridView2, "Ewidencja powyżej", dataGridView8);
+            try
+            {
+                GenerateReportSrodki(dataGridView2, "Ewidencja powyżej", dataGridView8);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OSTRZEŻENIE!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btPrintPonizej_Click(object sender, EventArgs e)
         {
-            GenerateReportSrodki(dataGridView3, "Ewidencja poniżej", dataGridView9);
+            try
+            {
+                GenerateReportSrodki(dataGridView3, "Ewidencja poniżej", dataGridView9);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OSTRZEŻENIE!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btFindInThisDoc_Click(object sender, EventArgs e)
         {
-            
-            panelFindInThisDoc.Visible = true;
             panelFindInThisDoc.BringToFront();
             tabControl1.TabPages.Remove(tabPage2);
             tabControl1.TabPages.Remove(tabPage3);
             ewidenceConfig.FindEquipmentByDoc(ewidencjaDataSet, "Ewi", dokument_ksiegowyTextBox.Text.Trim(), "ŚRODEK TRWAŁY", index_finansowyTextBox2.Text.Trim());
+            panelFindInThisDoc.Visible = true;
         }
 
         private void btFindInThisDoc2_Click(object sender, EventArgs e)
         {
-            
-            panelFindInThisDoc2.Visible = true;
             panelFindInThisDoc2.BringToFront();
             tabControl1.TabPages.Remove(tabPage1);
             tabControl1.TabPages.Remove(tabPage3);
             ewidenceConfig.FindEquipmentByDoc(ewidencjaDataSet, "Ewi", dokument_ksiegowyTextBox1.Text.Trim(), "POWYŻEJ", index_finansowyTextBox1.Text);
-
+            panelFindInThisDoc2.Visible = true;
         }
 
         private void btFindInThisDoc3_Click(object sender, EventArgs e)
         {
-            
-            panelFindInThisDoc3.Visible = true;
             panelFindInThisDoc3.BringToFront();
             tabControl1.TabPages.Remove(tabPage1);
             tabControl1.TabPages.Remove(tabPage2);
             ewidenceConfig.FindEquipmentByDoc(ewidencjaDataSet, "Ewi", dokument_ksiegowyTextBox2.Text.Trim(), "PONIŻEJ", index_finansowyTextBox.Text);
-
+            panelFindInThisDoc3.Visible = true;
         }
 
         private void btBackInDock_Click(object sender, EventArgs e)
@@ -1579,28 +1600,94 @@ namespace EwiInf
             panelFindInThisDoc.Visible = false;
             tabControl1.TabPages.Add(tabPage2);
             tabControl1.TabPages.Add(tabPage3);
+            dataGridView10.Visible = false;
         }
 
         private void btPrintByDoc_Click(object sender, EventArgs e)
         {
-            ewidenceConfig.GenerateReportByNumberDoc(dokument_ksiegowyTextBox.Text.Trim(), "Środki trwałe", dataGridView4);
+            if (dataGridView10.Visible)
+            {
+                try
+                {
+                    ewidenceConfig.GenerateReportByNumberDoc(dokument_ksiegowyTextBox.Text.Trim(), "Środki trwałe", dataGridView10, true);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "OSTRZEŻENIE!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                try
+                {
+                    ewidenceConfig.GenerateReportByNumberDoc(dokument_ksiegowyTextBox.Text.Trim(), "Środki trwałe", dataGridView4, false);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "OSTRZEŻENIE!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
         }
 
         private void btPrintByDoc2_Click(object sender, EventArgs e)
         {
-            ewidenceConfig.GenerateReportByNumberDoc(dokument_ksiegowyTextBox1.Text.Trim(), "Ewidencja powyżej", dataGridView5);
+            if (dataGridView11.Visible)
+            {
+                try
+                {
+                    ewidenceConfig.GenerateReportByNumberDoc(dokument_ksiegowyTextBox1.Text.Trim(), "Ewidencja powyżej", dataGridView11, true);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "OSTRZEŻENIE!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                try
+                {
+                    ewidenceConfig.GenerateReportByNumberDoc(dokument_ksiegowyTextBox1.Text.Trim(), "Ewidencja powyżej", dataGridView5, false);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "OSTRZEŻENIE!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
         }
 
         private void btBackInDock2_Click(object sender, EventArgs e)
         {
             panelFindInThisDoc2.Visible = false;
             tabControl1.TabPages.Add(tabPage1);
-            tabControl1.TabPages.Add(tabPage3); 
+            tabControl1.TabPages.Add(tabPage3);
+            dataGridView11.Visible = false;
         }
 
         private void btPrintByDoc3_Click(object sender, EventArgs e)
         {
-            ewidenceConfig.GenerateReportByNumberDoc(dokument_ksiegowyTextBox2.Text.Trim(), "Ewidencja poniżej", dataGridView6);
+            if (dataGridView12.Visible)
+            {
+                try
+                {
+                    ewidenceConfig.GenerateReportByNumberDoc(dokument_ksiegowyTextBox2.Text.Trim(), "Ewidencja poniżej", dataGridView12, true);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "OSTRZEŻENIE!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                try
+                {
+                    ewidenceConfig.GenerateReportByNumberDoc(dokument_ksiegowyTextBox2.Text.Trim(), "Ewidencja poniżej", dataGridView6, false);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "OSTRZEŻENIE!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
         }
 
         private void btBackInDock3_Click(object sender, EventArgs e)
@@ -1608,6 +1695,7 @@ namespace EwiInf
             panelFindInThisDoc3.Visible = false;
             tabControl1.TabPages.Add(tabPage1);
             tabControl1.TabPages.Add(tabPage2);
+            dataGridView12.Visible = false;
         }
 
         private void comboBoxPokazTylko1_SelectedIndexChanged(object sender, EventArgs e)
@@ -1828,6 +1916,46 @@ namespace EwiInf
                 ewidenceConfig.IStan = Convert.ToInt32(stanTextBox2.Text);
                 ewidenceConfig.NumMinus = Convert.ToInt32(numericRozchod3.Value);
                 ewidenceConfig.NumPlus = Convert.ToInt32(numericPrzychod3.Value);
+            }
+        }
+
+        private void panelFindInThisDoc_VisibleChanged(object sender, EventArgs e)
+        {
+            
+            if (panelFindInThisDoc.Visible)
+            {
+                
+                if (dataGridView4.Rows.Count==0)
+                {
+                    
+                    ewidenceConfig.FindEquipmentByDoc(ewidencjaDataSet, "History", dokument_ksiegowyTextBox.Text.Trim(), "ŚRODEK TRWAŁY", index_finansowyTextBox2.Text.Trim());
+                    if(dataGridView10.Rows.Count>0) dataGridView10.Visible = true;
+                    
+                }
+            }
+        }
+
+        private void panelFindInThisDoc2_VisibleChanged(object sender, EventArgs e)
+        {
+            if(panelFindInThisDoc2.Visible)
+            {
+                if(dataGridView5.Rows.Count==0)
+                {
+                    ewidenceConfig.FindEquipmentByDoc(ewidencjaDataSet, "History", dokument_ksiegowyTextBox1.Text.Trim(), "POWYŻEJ", index_finansowyTextBox1.Text.Trim());
+                    if (dataGridView11.Rows.Count > 0) dataGridView11.Visible = true;
+                }
+            }
+        }
+
+        private void panelFindInThisDoc3_VisibleChanged(object sender, EventArgs e)
+        {
+            if(panelFindInThisDoc3.Visible)
+            {
+                if(dataGridView6.Rows.Count==0)
+                {
+                    ewidenceConfig.FindEquipmentByDoc(ewidencjaDataSet, "History", dokument_ksiegowyTextBox2.Text.Trim(), "PONIŻEJ", index_finansowyTextBox.Text);
+                    if (dataGridView12.Rows.Count > 0) dataGridView12.Visible = true;
+                }
             }
         }
     }

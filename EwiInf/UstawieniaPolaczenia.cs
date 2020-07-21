@@ -12,6 +12,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using Microsoft.Win32;
 using System.Data.SqlClient;
 using System.Threading;
+using System.Security.AccessControl;
 
 namespace EwiInf
 {
@@ -206,14 +207,23 @@ namespace EwiInf
 
         private void iconButtonSave_Click(object sender, EventArgs e)
         {
+            label3.Focus();
             con.SetFields(textBoxUser.Text, textBoxHaslo.Text, textBoxNameServer.Text, comboBoxInstance.Text, comboBoxBase.Text);
-            //serializacja
-            using (Stream output = File.Create("Setting.dat"))
+
+            try
             {
-                BinaryFormatter formatter = new BinaryFormatter();
-                formatter.Serialize(output, con);
+                //serializacja
+                using (Stream output = File.Create("Setting.dat"))
+                {
+                    BinaryFormatter formatter = new BinaryFormatter();
+                    formatter.Serialize(output, con);
+                }
+                iconButtonSave.Enabled = false;
             }
-            iconButtonSave.Enabled = false;
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OSTRZEŻENIE!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void iconButtonSearch_Click(object sender, EventArgs e)
@@ -318,6 +328,7 @@ namespace EwiInf
 
         private void iconButtonTest_Click(object sender, EventArgs e)
         {
+            label3.Focus();
             iconButtonTest.Text = "TESTUJĘ...";
             iconButtonTest.Enabled = false;
             

@@ -172,7 +172,14 @@ namespace EwiInf
         
         private void btPrint_Click(object sender, EventArgs e)
         {
-            PrintReportRoom();
+            try
+            {
+                PrintReportRoom();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OSTRZEŻENIE!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void PrintPage(object sender, PrintPageEventArgs e)

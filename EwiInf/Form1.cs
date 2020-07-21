@@ -89,7 +89,7 @@ namespace EwiInf
             connection = new SqlConnection(con.ConnectionString);
             connectData.ConnectionString(con.ConnectionString);
 
-            EwiInf.Properties.Settings.Default["EwidencjaConnectionString"] = con.ConnectionString;
+            global::EwiInf.Properties.Settings.Default["EwidencjaConnectionString"] = con.ConnectionString;
             //label1.Text = ewidencjaDataSet.Tables[2].TableName.ToString();
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'ewidencjaDataSet.Ewi' . Możesz go przenieść lub usunąć.
             this.ewiTableAdapter.Fill(this.ewidencjaDataSet.Ewi);
@@ -110,6 +110,7 @@ namespace EwiInf
             SteerVisibleButtons();
             //wypełnienie szukajki z comboboxa hedaders z datagridview
             connectData.GetHeaderDGV(dataGridView1, comboBoxColumn);
+
         }
 
         
@@ -332,7 +333,14 @@ namespace EwiInf
 
         private void btPrint_Click(object sender, EventArgs e)
         {
-            GenerateReport();
+            try
+            {
+                GenerateReport();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OSTRZEŻENIE!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void GenerateReport()
@@ -457,13 +465,28 @@ namespace EwiInf
         {
             SteerVisibleButtons();
             if (Visible == true) connectData.RefreshBase(ewidencjaDataSet);
+
+            if (btFindAllInThisDoc.Visible)
+            {
+                textBoxSearchByDoc.Visible = false;
+                btEnterByDoc.Visible = false;
+            }
+            else
+            {
+                if (ewidencjaDataSet.Ewi.Rows.Count > 0)
+                {
+                    textBoxSearchByDoc.Visible = true;
+                    btEnterByDoc.Visible = true;
+                }
+            }
         }
 
         private void btQrCodePrint_Click(object sender, EventArgs e)
         {
-            GenerateQRAndEwi();
+            if(dataGridView1.Rows.Count>0) GenerateQRAndEwi();
+            else MessageBox.Show("Aby wygenerować qrcody i nr ewidencyjne musi być widoczny chociaż jeden rekord w tabeli.", "INFORMACJA", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        
+
         //generuje naklejki z qr code i nr ewidencyjnym do obklejenia
         private void GenerateQRAndEwi()
         {
@@ -657,6 +680,17 @@ namespace EwiInf
             this.Hide();
             Form7 Form7 = new Form7(this, con.ConnectionString, true);
             Form7.ShowDialog();
+        }
+
+        private void panelOptionTable_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btBackupBase_Click(object sender, EventArgs e)
+        {
+            FormBackup EwiInf = new FormBackup(con.ServerName, con.ServerSQLinstance, con.User, con.Password, con.DatabaseName, con.ConnectionString);
+            EwiInf.ShowDialog();
         }
     }
 }

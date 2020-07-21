@@ -10,8 +10,8 @@ namespace EwiInf
     [Serializable()]
     class ConnectionAndUser
     {
-        private string user = "Administrator";
-        private string password = "789kaoz";
+        private string user = "Admin";
+        private string password = "Haslo123";
         private string serverName = "";
         private string serverSQLinstance = "";
         private string databaseName = "";

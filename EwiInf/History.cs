@@ -69,7 +69,14 @@ namespace EwiInf
 
         private void btPrint_Click(object sender, EventArgs e)
         {
-            GenerateReport();
+            try
+            {
+                GenerateReport();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OSTRZEŻENIE!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void GenerateReport()

@@ -36,8 +36,8 @@
             this.pictureBoxIcon = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelWorkWindow = new System.Windows.Forms.Panel();
-            this.history1 = new EwiInf.History();
-            this.faktura1 = new EwiInf.Faktura();
+            this.history1 = new global::EwiInf.History();
+            this.faktura1 = new global::EwiInf.Faktura();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             this.panelWorkWindow.SuspendLayout();

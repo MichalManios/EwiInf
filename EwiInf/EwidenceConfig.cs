@@ -406,15 +406,15 @@ namespace EwiInf
             }
         }
 
-        public void GenerateReportByNumberDoc(string NumerDokumentu, string KtoraEwidencja, DataGridView dataGridView)
+        public void GenerateReportByNumberDoc(string NumerDokumentu, string KtoraEwidencja, DataGridView dataGridView, bool bHistory)
         {
             //string z nazwą pomieszczenia
             string fileName = "";
-            fileName = NumerDokumentu;
+            fileName = NumerDokumentu.Replace('\\','-');
             //ścieżka z nazwą pliku do tworzenia
-            string path = Application.StartupPath + KtoraEwidencja + fileName + ".pdf";
+            string path = Application.StartupPath + "\\"+KtoraEwidencja+"\\" + fileName + ".pdf";
             //ścieżka do utworzenia katalogu na wydruki
-            string path2 = Application.StartupPath + KtoraEwidencja;
+            string path2 = Application.StartupPath + "\\"+KtoraEwidencja;
             //ustawienie zabezpieczenia do zapisu i tworzenie katalogu
             DirectorySecurity securityRules = new DirectorySecurity();
             string dirPath = Path.GetDirectoryName(path2);
@@ -451,7 +451,9 @@ namespace EwiInf
                 //treść wydruku
 
                 //tutuł
-                Paragraph p = new Paragraph("Sprzęt wchodzący w skład "+KtoraEwidencja+ " zaksięgowany na podstawie dokumentu numer: ", bigFont);
+                Paragraph p;
+                if (bHistory==true) p = new Paragraph("Sprzęt usunięty wchodzący w skład " + KtoraEwidencja + " zaksięgowany na podstawie dokumentu numer: ", bigFont);
+                else p = new Paragraph("Sprzęt wchodzący w skład "+KtoraEwidencja+ " zaksięgowany na podstawie dokumentu numer: ", bigFont);
                 p.Alignment = Element.ALIGN_CENTER;
                 document.Add(p);
                 p = new Paragraph(NumerDokumentu, bigFont);

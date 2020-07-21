@@ -1194,7 +1194,17 @@ namespace EwiInf
             {
                 if (r is RadioButton)
                 {
-                    if((r as RadioButton).Checked==true) PrintThisQrThere(r as RadioButton);
+                    if ((r as RadioButton).Checked == true)
+                    {
+                        try
+                        {
+                            PrintThisQrThere(r as RadioButton);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message, "OSTRZEŻENIE!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
                 }
             }
             

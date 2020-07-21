@@ -1227,7 +1227,14 @@ namespace EwiInf
 
         private void btPrint_Click(object sender, EventArgs e)
         {
-            GenerateCard();
+            try
+            {
+                GenerateCard();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OSTRZEŻENIE!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         //generuje kartę urządzenia do pdf
